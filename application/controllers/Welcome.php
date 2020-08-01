@@ -31,13 +31,16 @@ class Welcome extends CI_Controller {
 		$products = $this->queries->getProduct();
 		$this->load->view('viewAll',['products'=>$products]);
 	}
+	
 	public function viewRepo()
 	{
 		$this -> load -> model('queries');
 		$products = $this->queries->getProduct();
-		/*$total = $this->queries->addition($products->p_Id);*/
-		$this->load->view('viewReport',['products'=>$products/*, 'total'=>$total*/]);
+		
+		$this->load->view('viewReport',['products'=>$products]);
 	}
+
+
 	public function add()
 	{
 		$this->load->view('add');
