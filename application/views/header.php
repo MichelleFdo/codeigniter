@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <a class="navbar-brand" href="#"><h1>uKnit Inventory Managment System</h1></a>
 </nav>
 <br/>

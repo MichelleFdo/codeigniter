@@ -2,7 +2,7 @@
   <div class='container'>
     <?php echo form_open("welcome/change/{$product[0] ->p_Id}", ['class'=>'form-horizontal']); ?>  
       <fieldset>
-        <legend><h3> Update Product </h3></legend>
+        <legend class="legend-update"><h3> Update Product </h3></legend>
 
         <div class="form-group row">
           <label for="p_Id" class="col-sm-2 col-form-label">Product ID</label>
@@ -56,9 +56,9 @@
         <div class="form-group row">
           <div class="col-sm-10">
             <!-- <button type="submit" class="btn btn-primary">Submit</button>-->
-            <?php echo form_submit(['name'=>'submit', 'value'=>'Submit', 'class'=>'btn btn-primary']); ?>
+            <?php echo form_submit(['name'=>'submit', 'value'=>'Update', 'class'=>'btn btn-primary']); ?>
             <!-- <button type="reset" class="btn btn-info">Cancel</button> -->
-            <?php echo form_reset(['name'=>'reset', 'value'=>'Reset', 'class'=>'btn btn-info']); ?>
+          
             <?php echo anchor('welcome','Back',['class'=>'btn btn-success']); ?>
           </div>
         </div>

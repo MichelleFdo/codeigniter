@@ -12,12 +12,12 @@
 
         public function addProduct($p_Id,$p_name,$image,$price,$quantity)
         {
-            $query="INSERT INTO tbl_product VALUES('$p_Id','$p_name','$image','$price','$quantity')";
+            $query="INSERT INTO tbl_product (p_Id, p_name, image, price, quantity) VALUES('$p_Id','$p_name','$image','$price','$quantity')";
             $this->db->query($query);
         }
 
         public function getSingleProduct($p_Id)
-        {   
+        {
             $query = $this->db->get_where('tbl_product', array('p_Id'=>$p_Id));
             if($query->num_rows()>0)
             {
@@ -27,7 +27,6 @@
 
         public function updateProduct($data, $p_Id)
         {
-            // var_dump($data);
             return $this->db->where('p_Id',$p_Id)
                             ->update('tbl_product',$data);
         

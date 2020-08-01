@@ -1,4 +1,5 @@
-<nav class="navbar navbar-inverse navbar-dark bg-dark">
+<nav class="navbar navbar-inverse fixed-bottom navbar-dark bg-primary">
+    <h6><center>copyright uknit.lk</center></h6></a>
 </nav>
 </body>
 </html>
