@@ -21,15 +21,21 @@
       <td><?php echo $product->p_name; ?></td>
       <td><?php echo $product->price; ?></td>
       <td><?php echo $product->quantity; ?></td>
-      <td><?php echo $product->price; ?></td>
+      <td><?php echo ($product->price*$product->quantity); ?></td>
     </tr>
+    
     <?php endforeach; ?>
+    <tr>
+      <td colspan=4>Total Value</td>
+      <td><?php echo $products->total; ?></td>
+    </tr>
     <?php else: ?>
       <tr>
         <td>No Records Found !</td>
       </tr>
     <?php endif; ?>
     </tbody>
+    
 </table> 
 <?php echo anchor('welcome','Back',['class'=>'btn btn-info']); ?>
             

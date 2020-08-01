@@ -35,7 +35,8 @@ class Welcome extends CI_Controller {
 	{
 		$this -> load -> model('queries');
 		$products = $this->queries->getProduct();
-		$this->load->view('viewReport',['products'=>$products]);
+		/*$total = $this->queries->addition($products->p_Id);*/
+		$this->load->view('viewReport',['products'=>$products/*, 'total'=>$total*/]);
 	}
 	public function add()
 	{

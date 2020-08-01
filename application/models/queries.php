@@ -36,5 +36,12 @@
         {
             return $this->db->delete('tbl_product', ['p_Id'=>$p_Id]);
         }
+
+        public function addition($p_Id)
+        {
+            $query=" SELECT CAST (EXP(SUM(LOG(total))) AS UNSIGNED) AS result From tbl_product WHERE 'p_Id'==$p_Id";
+            return  $this->db->query($query);
+        }
+
     }
 ?>
