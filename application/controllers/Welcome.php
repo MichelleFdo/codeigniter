@@ -24,7 +24,19 @@ class Welcome extends CI_Controller {
 		$products = $this->queries->getProduct();
 		$this->load->view('welcome_message',['products'=>$products]);
 	}
-	
+
+	public function viewAll()
+	{
+		$this -> load -> model('queries');
+		$products = $this->queries->getProduct();
+		$this->load->view('viewAll',['products'=>$products]);
+	}
+	public function viewRepo()
+	{
+		$this -> load -> model('queries');
+		$products = $this->queries->getProduct();
+		$this->load->view('viewReport',['products'=>$products]);
+	}
 	public function add()
 	{
 		$this->load->view('add');

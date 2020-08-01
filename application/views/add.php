@@ -52,9 +52,9 @@
         
         <div class="form-group row">
           <div class="col-sm-10">
-            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
-            <?php echo form_reset(['name'=>'reset', 'value'=>'Reset', 'class'=>'btn btn-info']); ?>
-            <?php echo anchor('welcome','Back',['class'=>'btn btn-success']); ?>
+            <input type="submit" name="submit" value="Submit" class="btn btn-success">
+            <?php echo form_reset(['name'=>'reset', 'value'=>'Reset', 'class'=>'btn btn-warning']); ?>
+            <?php echo anchor('welcome','Back',['class'=>'btn btn-info']); ?>
           </div>
         </div>
         

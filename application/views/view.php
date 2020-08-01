@@ -8,9 +8,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td colspan=2><?php echo $product[0]->image; ?></td>
-                    <td></td>
-                </tr>
                 <tr>
                     <td>Product Id :</td>
                     <td><?php echo $product[0]->p_Id; ?></p></td>

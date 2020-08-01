@@ -7,8 +7,8 @@
 <div class="container">
 
 <?php echo anchor('welcome/add', 'Add New Product', ['class'=>'btn btn-outline-primary']);?>
-<?php echo anchor('welcome/create', 'View All Products', ['class'=>'btn btn-outline-info']);?>
-<?php echo anchor('welcome/create', 'View Reports', ['class'=>'btn btn-outline-secondary']);?>
+<?php echo anchor('welcome/viewAll', 'View All Products', ['class'=>'btn btn-outline-info']);?>
+<?php echo anchor('welcome/viewRepo', 'View Reports', ['class'=>'btn btn-outline-secondary']);?>
 <br/>
 <br/>
 
@@ -24,19 +24,19 @@
     <tr class="table-primary">
       <th scope="col">Product ID</th>
       <th scope="col">Product Name</th>
-      <th scope="col">Image</th>
+      
       <th scope="col">Product Price</th>
       <th scope="col">Quantity</th>
       <th scope="col">Actions</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody class="table-light">
   <?php if(count($products)): ?>
     <?php foreach($products as $product): ?>
     <tr>
       <td><?php echo $product->p_Id; ?></td>
       <td><?php echo $product->p_name; ?></td>
-      <td><?php echo $product->image; ?></td>
+      
       <td><?php echo $product->price; ?></td>
       <td><?php echo $product->quantity; ?></td>
       <td><?php echo anchor("welcome/view/{$product->p_Id}", 'View', ['class'=>'badge badge-info']);?>
