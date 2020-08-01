@@ -1,7 +1,7 @@
 <?php include_once("header.php");?>
   <div class='container'>
     
-    <form name='addform' class='form-horizontal' method='post'>  
+    <form name='addform' class='form-horizontal' method='post' action="./save">  
       <fieldset>
         <legend><h3> Add Product </h3></legend>
 
@@ -52,7 +52,7 @@
         
         <div class="form-group row">
           <div class="col-sm-10">
-            <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" name="submit" value="Submit" class="btn btn-primary">
             <?php echo form_reset(['name'=>'reset', 'value'=>'Reset', 'class'=>'btn btn-info']); ?>
             <?php echo anchor('welcome','Back',['class'=>'btn btn-success']); ?>
           </div>

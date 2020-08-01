@@ -39,8 +39,8 @@ class Welcome extends CI_Controller {
 
 	public function save()
 	{
-		$this->load->view('add');
-
+		
+		$this -> load -> model('queries');
 		if($this->input->post('submit'))
 		{
 			$p_Id=$this->input->post('p_Id');
@@ -48,9 +48,10 @@ class Welcome extends CI_Controller {
 			$image=$this->input->post('image');
 			$price=$this->input->post('price');
 			$quantity=$this->input->post('quantity');
+			echo $p_Id.$p_name;
 			$this->queries->addProduct($p_Id,$p_name,$image,$price,$quantity);
 			echo 'Product saved successfully';
-			redirect("add/save");
+			// redirect("add");
 		}
 		else
 		{
@@ -60,7 +61,7 @@ class Welcome extends CI_Controller {
 	}
 	
 
-	public function change()
+	public function change($p_Id)
 	{
 		$this->form_validation->set_rules('p_Id','Product ID', 'required');
 		$this->form_validation->set_rules('p_name','Product Name', 'required');
@@ -69,6 +70,7 @@ class Welcome extends CI_Controller {
 		if ($this->form_validation->run())
 		{
 			$data = $this->input->post(); 
+			var_dump($data);
 			unset($data['submit']);
 			$this->load->model('queries');
 			if ($this->queries->updateProduct($data, $p_Id))

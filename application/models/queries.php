@@ -17,17 +17,17 @@
         }
 
         public function getSingleProduct($p_Id)
-        {
-            $query = $this->db->get_where('tbl_product', array('p_Id'->$p_Id));
+        {   
+            $query = $this->db->get_where('tbl_product', array('p_Id'=>$p_Id));
             if($query->num_rows()>0)
             {
                 return $query->result();
             }
-        
         }
 
         public function updateProduct($data, $p_Id)
         {
+            // var_dump($data);
             return $this->db->where('p_Id',$p_Id)
                             ->update('tbl_product',$data);
         
